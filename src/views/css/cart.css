@@ -58,22 +58,27 @@ body {
     margin-top: 10px;
     padding-top: 12px;
     padding-bottom: 5px;
-    position: relative; left: 350px; top: -700px;
+    
 
 }
 .section p{
     margin-top: 5px;
     padding-top: 5px;
     padding-bottom: 10px;
-    position: relative; left: 580px; top: -740px;
+   
     
    
 }
 .section img{
     padding-bottom: 10px;
     padding-top: 10px;
-    height: 300px;
-    position: relative; left: 70px; 
+    width: 63%;
+    
+}
+
+aside{
+    float: right;
+    width: 30%;
 }
 #productos {
     display: flex;
