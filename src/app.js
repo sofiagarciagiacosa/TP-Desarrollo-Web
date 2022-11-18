@@ -1,3 +1,4 @@
+const path= require("path");
 require("dotenv").config();
 
 const express = require("express");
@@ -5,7 +6,9 @@ const { home } = require("nodemon/lib/utils");
 
 const app = express();
 
-app.use(express.static("src/views"));
+app.use(express.static(path.join(__dirname, "../public")));
+
+app.set("view engine", "ejs");
 
 const homeRoutes = require("./routes/home");
 
