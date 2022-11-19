@@ -2,7 +2,7 @@ const path= require ("path");
 
 const express= require("express");
 
-const router = require("../home");
+const router = require("./home");
 
 const Router= express.Router();
 

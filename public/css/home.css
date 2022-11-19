@@ -20,7 +20,7 @@ header {
     position: sticky;
     top: 0%;
     z-index: 100;
-    margin: 10px;
+    
 }
 header nav ul {
     display: flex;
@@ -43,11 +43,7 @@ body {
     width: calc(100vw - (100vw - 100%));
   }
 
-.section {
-    padding: 16px 40px;
-    margin: 10px;
-    
-}
+
 .section h1 {
     color: rgba(0, 0, 0, 0.966);
     font-size: 30px;
@@ -69,21 +65,21 @@ body {
     padding-bottom: 10px;
    
 }
-.section img{
-    padding-bottom: 10px;
-    padding-top: 10px;
+
+#inicio img{
+    width: 100%;
+    padding: 0%;
+    margin: 0%;
 }
 
 #inicio {
-    background-color: rgb(247, 237, 105);
+    background-color: white;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-height: 50vh;
     position: relative;
-    font-family: 'Staatliches', cursive;
-    margin: 30px;
 }
 
 #productos {

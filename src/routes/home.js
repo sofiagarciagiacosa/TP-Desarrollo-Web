@@ -5,7 +5,7 @@ const express = require("express");
 const router= express.Router();
 
 router.get("/", (req,res) => {
-    res.sendFile(path.join(__dirname, "../../views/html/home.html"));
+    res.status(200).render("vistas/home.ejs");
 })
 
 module.exports= router;
