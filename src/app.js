@@ -14,9 +14,13 @@ const homeRoutes = require("./routes/home");
 
 const productRoutes= require("./routes/detailProduct");
 
-const cartRoutes= require("./routes/cart")
+const cartRoutes= require("./routes/cart");
+
+const userRoutes= require("./routes/users");
 
 app.use("/", homeRoutes);
+
+app.use("/users",userRoutes);
 
 app.listen( process.env.PORT, () => {console.log("Server listening on Port:", process.env.PORT)});
 
