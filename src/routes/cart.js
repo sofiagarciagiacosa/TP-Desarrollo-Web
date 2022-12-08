@@ -5,7 +5,7 @@ const express= require("express");
 const router = require("./home");
 
 const Router= express.Router();
-
+//5°
 router.get("/carrito", (req,res) => {
     return res.status(200).sendFile(path.join(__dirname, "../../views/html/cart.html"));
 })
