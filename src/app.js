@@ -24,9 +24,13 @@ const userRoutes= require("./routes/users");
 
 const productRoutes= require("./routes/products");
 
+const registerRoutes= require("./routes/register");
+
 app.use("/", homeRoutes);
 app.use("/users",userRoutes);
 app.use("/products",productRoutes);
+app.use("/carrito", cartRoutes);
+app.use("/registro", registerRoutes);
 app.use(bodyParser.urlencoded({ extended: true}));
 
 //4°

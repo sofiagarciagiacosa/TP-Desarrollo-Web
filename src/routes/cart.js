@@ -2,12 +2,10 @@ const path= require ("path");
 
 const express= require("express");
 
-const router = require("./home");
-
-const Router= express.Router();
+const router= express.Router();
 //5°
-router.get("/carrito", (req,res) => {
-    return res.status(200).sendFile(path.join(__dirname, "../../views/html/cart.html"));
+router.get("/", (req,res) => {
+    res.status(200).render("vistas/cart.ejs");
 })
 
 module.exports = router;
