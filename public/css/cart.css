@@ -6,37 +6,13 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-  background-clip: border-box;
+    background-clip: border-box;
 }
 :root{
     --primary: black;
     --secundary: white;
 }
-header {
-    background-color: white;
-    padding: 10px;
-    position: sticky;
-    top: 0%;
-    z-index: 100;
-    margin: 10px;
-}
 
-header nav ul {
-    display: flex;
-    list-style: none;
-}
-header nav ul li {
-    padding: 4px 8px;
-    transition: background-color .5s;
-    cursor: pointer;
-}
-
-header nav ul li a {
-    text-decoration: none;
-    font-family:'Raleway', sans-serif;
-    font-weight: bold;
-    color: rgba(12, 10, 10, 0.938);
-}
 body {
     font-family:'Raleway', sans-serif ;
     width: calc(100vw - (100vw - 100%));

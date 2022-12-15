@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+
+    </head>
+    <body>
+        <%- include("../partials/header.ejs") %>
+        <main>
+            
+            <section class="products">
+                <h2>Productos populares</h2>
+                <ul>
+                    <% products.forEach(function (product) { %>
+                    <li>
+                        <a href="/products/<%= product.id %>">
+                            <img src=<%= product.image %> />
+                            <h3><%= product.name %> </h3>
+                            <p><%= product.description %></p>
+                        </a>
+                    </li>
+                    <% }); %>
+                </ul>
+            </section>
+            
+            
+           
+        </main>
+        <%- include("../partials/footer.ejs") %>
+    </body>
+</html>
