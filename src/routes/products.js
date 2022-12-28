@@ -16,7 +16,7 @@ const products= [
     {
         id: 2,
         name: "Producto 2",
-        description: "This is the first product",
+        description: "This is the second product",
         image:
            "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
 
@@ -24,7 +24,7 @@ const products= [
     {
         id: 3,
         name: "Producto 3",
-        description: "This is the first product",
+        description: "This is the third product",
         image:
            "../assets/f83259bd913b67879bdc165bb09cc176.jpg",
 
@@ -32,9 +32,9 @@ const products= [
     {
         id: 4,
         name: "Producto 4",
-        description: "This is the first product",
+        description: "This is the fourth product",
         image:
-           "../assets/NEWCOLLECTION.png",
+           "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
 
     },
     

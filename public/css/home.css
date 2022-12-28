@@ -43,7 +43,7 @@ body {
 }
 
 #inicio img{
-    width: 100%;
+    width: 95%;
     padding: 0%;
     margin: 0%;
 }
@@ -59,16 +59,33 @@ body {
 }
 
 #productos {
-    display: flex;
+    
     flex-direction: column;
     justify-content: flex-start;
     align-items: center;
     min-height: 50vh;
     position: relative;
     font-family:'Raleway', sans-serif;
-    margin: 30px;
+    
 
 }
+#productos img{
+    width: 100%;
+}
+#productos h3{
+    text-align: center;
+    font-size: 35px;
+}
+#productos ul li{
+    text-align: center;
+    font-size: 25px;
+}
+
+#productos ul li a{
+    text-decoration: none;
+    text-align: center;
+}
+
 
 #contact {
     display: flex;
@@ -79,25 +96,11 @@ body {
     font-family: 'Inter', sans-serif;
 }
 
-footer {
-    background-color: white;
-    padding: 10px;
-    top: 0%;
-    z-index: 100;
-}
-footer nav ul {
-    display: flex;
-    list-style: none;
-}
-footer nav ul li {
-    padding: 4px 8px;
-    transition: background-color .5s;
-    cursor: pointer;
-}
-footer nav ul li a {
-    text-decoration: none;
-    font-family:'Raleway', sans-serif;
-    font-weight: bold;
-    color: rgba(12, 10, 10, 0.938);
-}
 
+@media (min-width:1200px){
+    #productos {
+        display: flex;
+
+    }
+    
+}

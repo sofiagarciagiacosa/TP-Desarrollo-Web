@@ -1,0 +1,21 @@
+footer {
+    background-color: white;
+    padding: 10px;
+    top: 0%;
+    z-index: 100;
+}
+footer nav ul {
+    display: flex;
+    list-style: none;
+}
+footer nav ul li {
+    padding: 4px 8px;
+    transition: background-color .5s;
+    cursor: pointer;
+}
+footer nav ul li a {
+    text-decoration: none;
+    font-family:'Raleway', sans-serif;
+    font-weight: bold;
+    color: rgba(12, 10, 10, 0.938);
+}
