@@ -7,8 +7,8 @@ const bodyParser = require("body-parser");
 const { home } = require("nodemon/lib/utils");
 const session= require("express-session");
 const cookieParser= require("cookie-parser");
-const fs= require("fs");
-const bcrypt= require("bcrypt");
+const quince=1000*60*15;
+
 
 //2°
 const app = express();
@@ -21,8 +21,7 @@ const homeRoutes = require("./routes/home");
 const cartRoutes= require("./routes/cart");
 const userRoutes= require("./routes/users");
 const productRoutes= require("./routes/products");
-const signInRoutes= require("./routes/signIn");
-const signuproutes= require("./routes/signup");
+const authRoutes= require("./routes/auth");
 
 
 
@@ -30,20 +29,17 @@ app.use("/", homeRoutes);
 app.use("/users",userRoutes);
 app.use("/products",productRoutes);
 app.use("/carrito", cartRoutes);
-app.use("/signIn", signInRoutes);
-app.use("/signup",signuproutes);
-
+app.use("/",authRoutes);
 
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, "../public")));
-
 app.use(cookieParser());
 
 app.use(
     session({
         saveUninitialized:true,
         secret: process.env.SESSION_SECRET,
-        cookie: {maxAge: oneDay},
+        cookie: {maxAge: quince},
         resave:false,
     })
 );
