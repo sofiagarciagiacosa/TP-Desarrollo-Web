@@ -30,10 +30,10 @@ body {
     padding-bottom: 10px;
 }
 .section h3{
-    font-size: 16px;
     margin-top: 10px;
     padding-top: 12px;
     padding-bottom: 5px;
+    
 }
 .section p{
     margin-top: 5px;
@@ -42,6 +42,26 @@ body {
    
 }
 
+.caja{
+    position: relative;
+    margin-top: 2%;
+}
+.texto1{
+    position: absolute;
+    top: 1120px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+    
+}
+.texto2{
+    position: absolute;
+    top: 1170px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    
+
+}
 #inicio img{
     width: 95%;
     padding: 0%;
@@ -66,24 +86,29 @@ body {
     min-height: 50vh;
     position: relative;
     font-family:'Raleway', sans-serif;
-    
+    margin-top: 5%;
+    margin-bottom: 5%;
 
 }
+
+
 #productos img{
     width: 100%;
 }
 #productos h3{
     text-align: center;
-    font-size: 35px;
+    font-size: 44px;
 }
 #productos ul li{
     text-align: center;
-    font-size: 25px;
+    font-size: 31px;
+    list-style: none;
 }
 
 #productos ul li a{
-    text-decoration: none;
     text-align: center;
+    text-decoration: underline;
+    color: black;
 }
 
 
