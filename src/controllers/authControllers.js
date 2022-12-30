@@ -4,19 +4,20 @@ const bcrypt= require("bcrypt");
 const crypto= require("crypto");
 
 
+
 const sendSigninForm=(req,res) =>{
-    console.log("get session: ",req.session);
     
     res.render(".././views/vistas/signin.ejs");
     
 };
 
 const getSigninData =(req,res) =>{
-    const{user,password}= req.body;
+    const{ user, password }= req.body;
     const file=fs.readFileSync(path.join(__dirname, "../models/user.json"));
     let parsedFile=JSON.parse(file);
 
-    const existedUser= parsedFile.find((usuario)=> usuario.user===user);
+    const existedUser= parsedFile.find((current)=> current.user===user);
+
     if(!existedUser){
         return res.render(".././views/vistas/invalid.ejs")
     }
@@ -26,20 +27,29 @@ const getSigninData =(req,res) =>{
         return res.render(".././views/vistas/invalid.ejs");
     }
 
-    res.render(".././views/vistas/home.ejs", {user});
+    req.session.userId=existedUser.id;
+    req.session.save();
+
+    res.redirect("/");
     
 };
 
 const sendSignupForm = (req,res) => {
-    console.log("get session: ",req.session);
     res.render(".././views/vistas/signup.ejs");
 };
 
 const getSignupData =(req,res) => {
-    const{user,password}= req.body;
+    const{ user, password}= req.body;
 
     const file=fs.readFileSync(path.join(__dirname, "../models/user.json"));
     let parsedFile=JSON.parse(file);
+
+    const existedUser=parsedFile.some((current) => current.user === user);
+
+    if (existedUser){
+        return res.send("El usuario ya existe");
+    }
+
 
 
     bcrypt.genSalt(10, (err, salt) =>{
@@ -51,7 +61,7 @@ const getSignupData =(req,res) => {
                 password: hash,
             };
             req.session.userId=id;
-            
+            req.session.save();
             
             
             
@@ -63,17 +73,11 @@ const getSignupData =(req,res) => {
                     2
                 )
             );
-            
-            
-            
+                
         });
     });
 
-   
-
-    
-
-    res.redirect("/signin");
+    res.redirect("/");
 }
 
 module.exports={
