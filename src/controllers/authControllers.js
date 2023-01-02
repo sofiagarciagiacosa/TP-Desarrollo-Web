@@ -80,9 +80,16 @@ const getSignupData =(req,res) => {
     res.redirect("/");
 }
 
+const signOut= (req,res) => {
+    req.session.destroy();
+    res.redirect("/signin");
+
+};
+
 module.exports={
     getSigninData,
     getSignupData,
     sendSigninForm,
     sendSignupForm,
+    signOut,
 }

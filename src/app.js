@@ -19,14 +19,12 @@ app.set("view engine", "ejs");
 //4° Rutas
 const homeRoutes = require("./routes/home");
 const cartRoutes= require("./routes/cart");
-const userRoutes= require("./routes/users");
 const productRoutes= require("./routes/products");
 const authRoutes= require("./routes/auth");
 
 
 
 app.use("/", homeRoutes);
-app.use("/users",userRoutes);
 app.use("/products",productRoutes);
 app.use("/carrito", cartRoutes);
 app.use("/",authRoutes);
