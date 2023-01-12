@@ -127,5 +127,35 @@ body {
         display: flex;
 
     }
-    
+    #inicio img{
+        width: 80%;
+        padding: 0%;
+        margin: 0%;
+        
+        
+    }
+    .cajaGrande1{
+        display: flex;
+        flex-direction: row;
+        height: 100%;
+        margin: none;
+        width: 100%;
+    }
+    .texto1{
+        position: absolute;
+        top: 620px;
+
+    }
+    #productos h3{
+        font-size: 30px;
+    }
+    .texto2{
+        top: 660px;
+    }
+    #productos ul li{
+        font-size: 18px;
+    }
+    .caja{
+        margin: 4px;
+    }
 }
