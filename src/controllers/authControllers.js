@@ -49,6 +49,7 @@ const getSignupData =(req,res) => {
     if (existedUser){
         return res.send("El usuario ya existe");
     }
+    
 
 
 

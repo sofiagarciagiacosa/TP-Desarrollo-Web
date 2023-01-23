@@ -1,8 +1,8 @@
 const fs=require("fs");
 const path=require("path");
 
-//problema con el middleware me tira undefined:
-/*const checkUserId= (req,res,next) => {
+
+const checkUserId= (req,res,next) => {
     
     const {userId}= req.session;
 
@@ -27,17 +27,8 @@ const path=require("path");
 
 };
 
-const checkUserNotSigned= (req,res,next) => {
-    const {userId}= req.session;
 
-    if (!userId){
-        return res.redirect("/");
-    }
+module.exports= {checkUserId
     
-    next();
-
 };
 
-module.exports= {checkUserId, checkUserNotSigned};
-
-*/
