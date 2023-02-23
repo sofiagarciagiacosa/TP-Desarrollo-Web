@@ -8,20 +8,23 @@ const { home } = require("nodemon/lib/utils");
 const session= require("express-session");
 const cookieParser= require("cookie-parser");
 const quince=1000*60*60*24;
-
+const {testDb}= require("./database");
 
 //2°
 const app = express();
 
-//3°
-app.set("view engine", "ejs");
+//conecto DB
+testDb();
 
+// middlewares
 app.use(bodyParser.urlencoded({ extended: true}));
 app.use(express.static(path.join(__dirname, "../public")));
 app.use(cookieParser());
 app.use(bodyParser.json());
 
-
+//3° settings
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "../views"));
 
 app.use(
     session({

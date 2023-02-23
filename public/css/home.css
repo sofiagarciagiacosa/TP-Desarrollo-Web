@@ -18,7 +18,9 @@ body {
     font-family:'Raleway', sans-serif ;
     width: calc(100vw - (100vw - 100%));
   }
-
+main{
+    padding-top: 100px;
+}
 
 .section h1 {
     color: rgba(0, 0, 0, 0.966);

@@ -23,13 +23,13 @@ nav{
     position: fixed;
     z-index: 3;
     height: 6rem;
-    width: 100vw;
+    width: 100%;
     display:flex;
     background-color: white;
 }
 
 .logo {
-    display: block;
+    display: flex;
     padding: 0.75cm;
     width: 20vw;
     font-size:23px;
@@ -37,18 +37,20 @@ nav{
     text-align: center;
     position: absolute;
     cursor: pointer;
-    left: 400px;
-    
+    justify-content: center;
+    width: 100%;
 
 }
 
 .logo div{
     background: #000;
-    width: 30px;
+    width: 100%;
     height: 3px;
     margin: 5px;
     transition: all 0.3s ease;
     text-align: center;
+    display: flex;
+    justify-content: center;
 
 }
 
@@ -56,7 +58,8 @@ h1{
     font-family: 'Bebas Neue', cursive;
     font-size: 50px;
     text-align: center;
-    
+    justify-content: center;
+    display: flex;
     
 }
 .hamburger div{
@@ -163,7 +166,5 @@ li.fade{
     .hamburger{
         display: none;
     }
-    .logo{
-        left: 540px;
-    }
+    
 }

@@ -12,7 +12,7 @@ router.use(bodyParser.urlencoded({ extended: true}));
 
 //5°
 router.get("/"
-,[checkUserId]
+//,[checkUserId]
 ,sendHomeView);
 
 module.exports= router;

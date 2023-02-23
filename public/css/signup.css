@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&family=Staatliches&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-clip: border-box;
+}
+:root{
+    --primary: black;
+    --secundary: white;
+}
+
+main{
+    padding-top: 100px;
+    
+}
+
+.registro{
+    text-align: center;
+    margin-top: 30px;
+    margin-bottom: 15px;
+}
+
+h2{
+    font-family: 'Inter', sans-serif;
+    font-weight: bold;
+}
+
+.form{
+    width: 100%;
+    max-width: 500px;
+    
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(226, 226, 204);
+    padding: 100px;
+}
+
+.form input{
+    width: 90%;
+    height: 30px;
+    margin: .5rem
+  }
+.form button{
+    padding: .5em 1em;
+    border:none;
+    cursor: pointer;
+}
+
+.form-element {
+    display: block;
+    margin: 1rem auto;
+    
+  }
