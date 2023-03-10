@@ -2,40 +2,47 @@
 <html>
     <head>
         <title>Registro -AURA</title>
-        <link rel="stylesheet" href="../css/header.css"/>
+        <link rel="stylesheet" href="../css/headerNuevo.css"/>
         <link rel="stylesheet" href="../css/footer.css"/>
+        <link rel="stylesheet" href="../css/signup.css"/>
 
     </head>
     <body>
-        
+        <%- include("../partials/header.ejs") %>
         <main>
-            <form action="/signIn" method="post">
-                <div>
-                    <label for="user">Nombre del usuario</label>
+           
+
+            <form class="form" action="http://localhost:8000/signin" method="post">
+
+                <div class="registro">
+                    <h2> Inicio de sesión </h2>
+                    
                 </div>
+                
+                
                 <div>
                     <input 
-                      id="user"
-                      name="user"
-                      type="text"
-                      placeholder="nombre de usuario"
+                      required type="text"
+                      name="email"
+                      placeholder=" Email"
                     />
 
                 </div>
-                <div>
-                    <label for="password">Contraseña</label>
-                </div>
+
+
                 <div>
                     <input 
-                      id="password"
+                      required type="password"
                       name="password"
-                      type="password"
-                      placeholder="Contraseña"
+                      placeholder=" Contraseña"
                     />
 
                 </div>
                 <div>
-                    <button type="submit">Ingresar</button>
+                    <button class="form-element" type="submit">SIGN IN</button>
+                </div>
+                <div class="inicio-sesion">
+                     <a href=""> ¿Olvidaste tu contraseña?</a>
                 </div>
             </form>
         </main>

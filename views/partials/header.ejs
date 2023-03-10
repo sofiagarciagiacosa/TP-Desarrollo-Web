@@ -1,5 +1,12 @@
 <header>
-    <nav>
+    
+
+    <nav class="espacio">
+        <div class="espacio"> </div>
+    </nav>
+    
+    <nav class="navbar">
+        
         <div class="hamburger">
             <div class="bars1"> </div>
             <div class="bars2"> </div>
@@ -7,22 +14,39 @@
         </div>
 
         <ul class="nav-links">
-            <li><a href="#">"PRODUCTOS"</a></li>
-            <li><a href="#">"SALE"</a></li>
-            <li><a href="#">"LOCALES"</a></li>
-            <li><a href="#">"MI CUENTA"</a></li>
+            <li class="li1"><a href="#">PRODUCTOS</a></li>
+            <li class="li2"><a href="#">SALE</a></li>
+            <li class="li3"><a href="#">LOCALES</a></li>
 
-        </ul> 
+            <li class="li4"><a href="#">MI CUENTA</a></li>
+            <li class="li5"><a href="#">CARRITO</a></li>
+            
+
+        </ul>
+
+        <a class="carrito" href="#">CARRITO</a>
         <div class="logo">
-            <h1>AURA</h1>
+            <h1>aura</h1>
         </div>
         
     </nav>
     
+    <script >
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li"  );
         
-    
-    
-    
-    <script src="../../src/routes/navBar.js"></script>
+        hamburger.addEventListener('click', ()=>{
+            //Links
+            navLinks.classList.toggle("open");
+            links.forEach(link => {
+                link.classList.toggle("fade");
+            });
+            //Animation
+            hamburger.classList.toggle("toggle");
+        });
+        
+
+    </script>
 
 </header>

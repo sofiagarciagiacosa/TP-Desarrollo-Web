@@ -2,7 +2,7 @@ const path= require("path");
 
 const express = require("express");
 const { sendHomeView } = require("../controllers/homeCotrollers");
-const { checkUserId } = require("../middlewares/checkUserId");
+
 
 
 const router= express.Router();

@@ -3,22 +3,38 @@
     <head>
         <title>AURA online shop</title>
         <link rel="stylesheet" href="../css/home.css" />
-        <link rel="stylesheet" href="../css/header.css" />
+        <link rel="stylesheet" href="../css/headerNuevo.css" />
+        
+        
         <link rel="stylesheet" href="../css/footer.css" />
     </head>
     <body>
         <%- include("../partials/header.ejs") %>
         <main>
             <section class="section" id="inicio">
-                <img srcset="../assets/NEWCOLLECTION.1000px.jpg 1000w, NEWCOLLECTION.400px.jpg 400w" >
-                
+        
+                <div class="contenedorinicio">
+                    
+                    <picture>
+                        <source media="(max-width: 999px)" srcset="../assets/il_1140xN.4217385620_luz2mobile.jpg">
+                        <source media="(min-width: 1000px)" srcset="../assets/il_1140xN.4217385620_luz2desktop.jpg">
+                        <img src="../assets/il_1140xN.4217385620_luz2desktop.jpg" alt="Chris standing up holding his daughter Elva">
+                    </picture>
+                    
+                            
+                    <div class="textoInicio"> <h3>new limited edition</h3></div>
+                    <div class="textoInicio2"><a href="#">SHOP NOW</a> </div>
+                    
+                            
+                </div>
+                        
             </section>
             <section class="section" id="productos">
                 
                 <ul>
                     <div class="cajaGrande1">
                         <div class="caja">
-                            <img src="../assets/4f29241c1ce3ceb24b5690a75af6cdf6nueva2.jpg" />
+                            <img class="img1" src="../assets/4f29241c1ce3ceb24b5690a75af6cdf6nueva2.jpg" />
                             <div class="texto1"><h3>Living</h3></div>
                             <div class="texto2"><li ><a href="#">Comprar</a></li></div>
                         </div>
@@ -32,7 +48,7 @@
                     </div>
                     <div class="cajaGrande1">
                         <div class="caja">
-                            <img src="../assets/b98af1946fb2a84ca72228a6d6711081.jpg" />
+                            <img class="img1" src="../assets/b98af1946fb2a84ca72228a6d6711081.jpg" />
                             <div class="texto1"><h3>Dormitorio</h3></div>
                             <div class="texto2"><li><a href="#">Comprar</a></li></div>
                         </div>
@@ -50,21 +66,7 @@
                     
                 </ul>
             </section>
-            <section class="section" id="contact">
-                <h2>Contactanos</h2>
-                <form action="" method="post">
-                    <input type="text" placeholder="Nombre" />
-                    <input type="text" placeholder="Apellido" />
-                    <input type="email" placeholder="Email" required />
-                    <textarea required>
-                    </textarea>
-
-                    <label for="terms">Acepto los terminos y condiciones</label>
-                    <input type="checkbox" id="terms" required />
-                    <button type="submit">Enviar</button>
-
-                </form>
-            </section>
+            
            
         </main>
         

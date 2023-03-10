@@ -6,6 +6,9 @@ const sequelize= new Sequelize(DB_NAME,  DB_USERNAME,DB_PASSWORD,{
     host:"localhost",
     dialect: "mysql",
     port: DB_PORT,
+    define: {
+        timestamps: false
+    }
     
 
 });

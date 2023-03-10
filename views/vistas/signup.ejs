@@ -2,7 +2,7 @@
 <html>
     <head>
         <title>Registro -AURA</title>
-        <link rel="stylesheet" href="../css/header.css"/>
+        <link rel="stylesheet" href="../css/headerNuevo.css"/>
         <link rel="stylesheet" href="../css/footer.css"/>
         <link rel="stylesheet" href="../css/signup.css"/>
 
@@ -12,7 +12,7 @@
         <main>
            
 
-            <form class="form" action="http://localhost:8000/signup" method="post">
+            <form class="form" id="signupForm" action="http://localhost:8000/signup" method="post">
 
                 <div class="registro">
                     <h2> Crea tu cuenta </h2>
@@ -21,9 +21,9 @@
                 
                 <div>
                     <input 
-                      id="user"
-                      name="user"
-                      type="text"
+                      required type="text"
+                      id="name"
+                      name="name"
                       placeholder=" Nombre"
                     />
             
@@ -31,9 +31,9 @@
                 
                 <div>
                     <input 
-                      id="user"
-                      name="user"
-                      type="text"
+                      required type="text"
+                      id="lastname"
+                      name="lastname"
                       placeholder=" Apellido"
                     />
                 
@@ -42,9 +42,9 @@
                 
                 <div>
                     <input 
+                      required type="text"
                       id="email"
                       name="email"
-                      type="email"
                       placeholder=" Email"
                     />
 
@@ -53,9 +53,8 @@
 
                 <div>
                     <input 
-                      id="password"
+                      required type="password"
                       name="password"
-                      type="password"
                       placeholder=" Contraseña"
                     />
 
@@ -67,6 +66,7 @@
                     <p> ¿Ya tenés una cuenta? <a href="http://localhost:8000/signin">¡Inicia sesión!</a></p>
                 </div>
             </form>
+            <script src="../localStorage/signup.js"></script>
         </main>
     
     
