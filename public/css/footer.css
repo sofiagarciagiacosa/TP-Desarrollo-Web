@@ -1,21 +1,43 @@
-footer {
-    background-color: white;
-    padding: 10px;
-    top: 0%;
-    z-index: 100;
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter&family=Raleway&family=Staatliches&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-clip: border-box;
 }
-footer nav ul {
+:root{
+    --primary: black;
+    --secundary: white;
+}
+.nav-footer{
+    font-family:'Raleway', sans-serif ;
+    padding: 1em;
+    height: 1000px;
+    bottom: 0;
+    position: relative;
+    left: 0;
+    bottom: 0;
     display: flex;
-    list-style: none;
+    flex-direction: column;
+    
+   
 }
-footer nav ul li {
-    padding: 4px 8px;
-    transition: background-color .5s;
-    cursor: pointer;
+
+.logo-footer{
+    display: flex;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    padding: 0%;
+    top: 0%;
+    
+
 }
-footer nav ul li a {
-    text-decoration: none;
-    font-family:'Raleway', sans-serif;
-    font-weight: bold;
-    color: rgba(12, 10, 10, 0.938);
+.logo-footer h1{
+    font-size: 200px;
 }
+

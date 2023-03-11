@@ -4,6 +4,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&family=Staatliches&display=swap');
 
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Teko:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@600&display=swap');
 *{
     margin: 0;
     padding: 0;
@@ -18,7 +19,9 @@
 body {
     font-family:'Raleway', sans-serif ;
     width: calc(100vw - (100vw - 100%));
-  }
+    
+    
+}
 main{
     padding-top: 100px;
 }
@@ -51,9 +54,11 @@ main{
 }
 .texto1{
     position: absolute;
-    top: 1120px;
+    top: 1100px;
     left: 50%;
     transform: translate(-50%, -50%);
+    color: rgb(51, 50, 50);
+    font-family: 'Golos Text', sans-serif;
     
     
 }
@@ -65,6 +70,7 @@ main{
     
 
 }
+
 #inicio picture{
     
     
@@ -149,18 +155,19 @@ main{
 }
 #productos h3{
     text-align: center;
-    font-size: 44px;
+    font-size: 46px;
 }
 #productos ul li{
     text-align: center;
-    font-size: 31px;
+    font-size: 25px;
     list-style: none;
 }
 
 #productos ul li a{
     text-align: center;
     text-decoration: underline;
-    color: black;
+    color: rgb(51, 50, 50);
+    font-family: 'Golos Text', sans-serif;
 }
 
 
@@ -226,14 +233,14 @@ main{
     }
     .texto1{
         position: absolute;
-        top: 620px;
+        top: 710px;
 
     }
     #productos h3{
-        font-size: 30px;
+        font-size: 35px;
     }
     .texto2{
-        top: 660px;
+        top: 760px;
     }
 
     #productos ul li{
@@ -249,6 +256,15 @@ main{
         padding: 0%;
         border-radius: 30px;
     }
+    #productos .img1{
+        border-top-right-radius: 0%;
+        border-bottom-right-radius: 0%;
+    }
+    #productos .img2{
+        border-bottom-left-radius: 0%;
+        border-top-left-radius: 0%;
+    }
+
     #productos ul{
         width: 100%;
 
