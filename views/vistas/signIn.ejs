@@ -10,41 +10,43 @@
     <body>
         <%- include("../partials/header.ejs") %>
         <main>
-           
-
-            <form class="form" action="http://localhost:8000/signin" method="post">
-
-                <div class="registro">
-                    <h2> Inicio de sesión </h2>
-                    
-                </div>
-                
-                
-                <div>
-                    <input 
-                      required type="text"
-                      name="email"
-                      placeholder=" Email"
-                    />
+            <div class="contenedor-form">
+                <div class="imagen">
 
                 </div>
+                <form class="form" action="http://localhost:8000/signin" method="post">
+    
+                    <div class="registro">
+                        <h2> Inicio de sesión </h2>
+                        
+                    </div>
+                    <div class="formulario-input">
+                        <input 
+                          required type="text"
+                          name="email"
+                          placeholder=" Email"
+                        />
+    
+                    </div>
+                    <div class="formulario-input" >
+                        <input 
+                          required type="password"
+                          name="password"
+                          placeholder=" Contraseña"
+                        />
+    
+                    </div>
+                    <div class="formulario-boton">
+                        <button class="form-element" type="submit">SIGN IN</button>
+                    </div>
+                    <div class="inicio-sesion">
+                        <p>¿No tenes una cuenta?<a href="http://localhost:8000/signup">Registrate!</a></p>
+                        <a href=""> ¿Olvidaste tu contraseña?</a>
+                    </div>
+                </form>
 
-
-                <div>
-                    <input 
-                      required type="password"
-                      name="password"
-                      placeholder=" Contraseña"
-                    />
-
-                </div>
-                <div>
-                    <button class="form-element" type="submit">SIGN IN</button>
-                </div>
-                <div class="inicio-sesion">
-                     <a href=""> ¿Olvidaste tu contraseña?</a>
-                </div>
-            </form>
+            </div>
+            
         </main>
     
     

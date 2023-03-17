@@ -10,62 +10,67 @@
     <body>
         <%- include("../partials/header.ejs") %>
         <main>
-           
+            <div class="contenedor-form">
+                <div class="imagen">
 
-            <form class="form" id="signupForm" action="http://localhost:8000/signup" method="post">
-
-                <div class="registro">
-                    <h2> Crea tu cuenta </h2>
+                </div>
+    
+                <form class="form" id="signupForm" action="http://localhost:8000/signup" method="post">
+    
+                    <div class="registro">
+                        <h2> Crea tu cuenta </h2>
+                        
+                    </div>
                     
-                </div>
+                    <div class="formulario-input">
+                        <input 
+                          required type="text"
+                          id="name"
+                          name="name"
+                          placeholder=" Nombre"
+                        />
                 
-                <div>
-                    <input 
-                      required type="text"
-                      id="name"
-                      name="name"
-                      placeholder=" Nombre"
-                    />
+                    </div>
+                    
+                    <div class="formulario-input">
+                        <input 
+                          required type="text"
+                          id="lastname"
+                          name="lastname"
+                          placeholder=" Apellido"
+                        />
+                    
+    
+                    </div>
+                    
+                    <div class="formulario-input">
+                        <input 
+                          required type="text"
+                          id="email"
+                          name="email"
+                          placeholder=" Email"
+                        />
+    
+                    </div>
+    
+    
+                    <div class="formulario-input">
+                        <input 
+                          required type="password"
+                          name="password"
+                          placeholder=" Contraseña"
+                        />
+    
+                    </div>
+                    <div class="formulario-boton">
+                        <button class="form-element" type="submit">Crear</button>
+                    </div>
+                    <div class="inicio-sesion">
+                        <p> ¿Ya tenés una cuenta? <a href="http://localhost:8000/signin">¡Inicia sesión!</a></p>
+                    </div>
+                </form>
+            </div>
             
-                </div>
-                
-                <div>
-                    <input 
-                      required type="text"
-                      id="lastname"
-                      name="lastname"
-                      placeholder=" Apellido"
-                    />
-                
-
-                </div>
-                
-                <div>
-                    <input 
-                      required type="text"
-                      id="email"
-                      name="email"
-                      placeholder=" Email"
-                    />
-
-                </div>
-
-
-                <div>
-                    <input 
-                      required type="password"
-                      name="password"
-                      placeholder=" Contraseña"
-                    />
-
-                </div>
-                <div>
-                    <button class="form-element" type="submit">Crear</button>
-                </div>
-                <div class="inicio-sesion">
-                    <p> ¿Ya tenés una cuenta? <a href="http://localhost:8000/signin">¡Inicia sesión!</a></p>
-                </div>
-            </form>
             <script src="../localStorage/signup.js"></script>
         </main>
     

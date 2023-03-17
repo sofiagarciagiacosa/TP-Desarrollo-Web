@@ -14,14 +14,17 @@
 }
 
 main{
-    padding-top: 100px;
+    padding-top: 120px;
     
 }
 
 .registro{
     text-align: center;
-    margin-top: 30px;
+    margin-top: 350px;
     margin-bottom: 15px;
+    font-family:'Raleway', sans-serif;
+    font-size: 30px;
+    color: rgb(51, 50, 50);
 }
 
 h2{
@@ -30,31 +33,117 @@ h2{
 }
 
 .form{
-    width: 100%;
-    max-width: 500px;
-    
-    margin: 0 auto;
+    margin: 20px;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(226, 226, 204);
-    padding: 100px;
+    background-color: rgb(245, 244, 243);
+    border-radius: 30px;
+    
+}
+.formulario-input{
+    width: 100%;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    
 }
 
-.form input{
-    width: 90%;
+.formulario-input input{
+    width: 100%;
     height: 30px;
-    margin: .5rem
-  }
-.form button{
-    padding: .5em 1em;
+    margin-left: 20px;
+    margin-right: 20px;
+    border-radius: 30px;
+    font-size: 30px;
+    height: 100px;
+    font-family:'Raleway', sans-serif;
+    color: rgb(51, 50, 50);
+    border-color: white;
+}
+.formulario-boton{
+    width: 100%;
+    display: flex;
+    padding: 20px;
+}
+.formulario-boton button{
     border:none;
     cursor: pointer;
-}
+    height: 65px;
+    width: 200px;
+    font-size: 30px;
+    font-family:'Raleway', sans-serif;
+    color: rgb(51, 50, 50);
+    border-radius: 30px;
+    border-color:  rgb(51, 50, 50);
+    background-color: rgb(245, 244, 243);
+    border: 2px;
+    border-width: 2px;
+    border: double;
 
+}
+.inicio-sesion{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    font-size: 25px;
+    font-family:'Raleway', sans-serif;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 350px;
+    
+
+}
+.inicio-sesion a{
+    color: rgb(51, 50, 50);
+    margin: 13px;
+}
 .form-element {
     display: block;
     margin: 1rem auto;
     
-  }
+}
+@media (min-width:1200px){
+    .contenedor-form{
+        display: flex;
+
+    }
+    .form{
+        margin: 30px;
+        width: 50%;
+        right: 0;
+        display: flex;
+        position: relative;
+
+    }
+    .imagen{
+        width: 50%;
+    }
+    .registro{
+        margin-top: 180px;
+        font-size: 23px;
+    }
+    .formulario-input input{
+        width: 100%;
+        font-size: 18px;
+        height: 50px;
+    }
+    .formulario-boton button{
+        height: 45px;
+        width: 120px;
+        font-size: 20px;
+    }
+    .inicio-sesion{
+        font-size: 18px;
+        font-family:'Raleway', sans-serif;
+        padding-bottom: 180px;
+
+    }
+    .formulario-boton{
+        padding: 10px;
+    }
+    .formulario-input{
+        padding: 10px;
+    }
+}

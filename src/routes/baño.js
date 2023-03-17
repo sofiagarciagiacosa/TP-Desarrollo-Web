@@ -1,58 +1,63 @@
-const path= require("path");
-
 const express = require("express");
-
 const router= express.Router();
 
-const products= [
+const productsBaño= [
     {
         id: 1,
-        name: "Producto 1",
+        name: "PROUCTO 1",
         description: "This is the first product",
+        price: "$12500",
         image: 
             "../assets/d04f9e1cf3dc7d8a4522828dbfe2893c.jpg" ,
 
     },
     {
         id: 2,
-        name: "Producto 2",
+        name: "PROUCTO 2",
         description: "This is the second product",
+        price: "$12500",
         image:
            "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
 
     },
     {
         id: 3,
-        name: "Producto 3",
+        name: "PROUCTO 3",
         description: "This is the third product",
+        price: "$12500",
         image:
            "../assets/f83259bd913b67879bdc165bb09cc176.jpg",
 
     },
     {
         id: 4,
-        name: "Producto 4",
+        name: "PROUCTO 4",
         description: "This is the fourth product",
+        price: "$12500",
         image:
            "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
 
     },
-    
 ]
 
-//5°
-router.get("/", (req,res) => {
-    return res.status(200).render("vistas/products.ejs",{
-        products,
+
+
+router.get("/", (req,res) =>{
+    return res.status(200).render("vistas/baño",{
+        productsBaño,
     });
 });
-
 router.get("/:id", (req,res) => {
     const {id} = req.params;
-    const product= products.find((product) => product.id == id);
+    const product= productsBaño.find((product) => product.id == id);
     return res.status(200).render("vistas/detailProduct.ejs");
 });
 
 
-
 module.exports= router;
+
+
+
+
+
+
