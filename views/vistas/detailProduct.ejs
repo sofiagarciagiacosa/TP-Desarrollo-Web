@@ -2,31 +2,95 @@
 <html>
     <head>
         <title>AURA online shop</title>
-        <link rel="stylesheet" href="../css/detailProduct.css" />
+        <link rel="stylesheet" href="../css/footer.css" />
         <link rel="stylesheet" href="../css/headerNuevo.css" />
+        <link rel="stylesheet" href="../css/detailProduct.css" />
     </head>
     <body>
         <%- include("../partials/header.ejs") %>
         <main>
-            <section class="section" id="Productos">
-                
-                
-                
-                
-                <img src=<%= product.image %> />
-                <h3><%= product.name %> </h3>
-                <p><%= product.description %></p>
-                        
-                
-
-
-                
-            </section>
+            <h3>hola</h3>
+            
+            <h1 id="name"></h1>
+            <img id="image">
+            <p id="description"></p>
+            <p id="price"></p>
+            <a id="comprar" href="#">Comprar</a>
+            
+            
 
         </main>
+
+
+        <script>
+            const path = window.location.pathname;
+            const id = path.substring(path.lastIndexOf('/') + 1);
+            console.log(id);
+            
+            const productsLiving= [
+                {
+                    id: "producto1",
+                    name: "PROUCTO 1",
+                    description: "This is the first product",
+                    price: "$12500",
+                    image: 
+                        "../assets/d04f9e1cf3dc7d8a4522828dbfe2893c.jpg" ,
+                },
+                {
+                    id: "producto2",
+                    name: "PROUCTO 2",
+                    description: "This is the second product",
+                    price: "$12500",
+                    image:
+                        "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
+                },
+                {
+                    id: "producto3",
+                    name: "PROUCTO 3",
+                    description: "This is the third product",
+                    price: "$12500",
+                    image:
+                        "../assets/f83259bd913b67879bdc165bb09cc176.jpg",
+                },
+                {
+                    id: "producto4",
+                    name: "PROUCTO 4",
+                    description: "This is the fourth product",
+                    price: "$12500",
+                    image:
+                        "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
+                },
+            ]
+            
+
+            const producto = productsLiving.find(p => p.id === id);
+            console.log(productsLiving);
+            console.log(producto);
+
+            document.getElementById("name").textContent = producto.name;
+            document.getElementById("image").src = producto.image;
+            document.getElementById("description").textContent = producto.description;
+            document.getElementById("price").textContent = `Precio: ${producto.price}`;
+            document.getElementById("comprar").href = `comprar.html?id=${producto.id}`;
+            
+
+
+
+
+            
+            
+        </script>
+
+
+
         <%- include("../partials/footer.ejs") %>
         
     
     
     </body>
 </html>
+
+
+
+
+
