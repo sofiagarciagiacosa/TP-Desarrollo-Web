@@ -35,7 +35,7 @@
             const id = path.substring(path.lastIndexOf('/') + 1);
             console.log(id);
             
-            const productsLiving= [
+            const productsCocina= [
                 {
                     id: "producto1",
                     name: "Producto 1",
@@ -70,10 +70,9 @@
                 },
             ]
             
-            
 
-            const producto = productsLiving.find(p => p.id === id);
-            console.log(productsLiving);
+            const producto = productsCocina.find(p => p.id === id);
+            console.log(productsCocina);
             console.log(producto);
 
             document.getElementById("name").textContent = producto.name;
@@ -81,12 +80,6 @@
             document.getElementById("description").textContent = producto.description;
             document.getElementById("price").textContent = `Precio: ${producto.price}`;
             document.getElementById("comprar").href = `comprar.html?id=${producto.id}`;
-            
-
-
-            
-            
-            
             
 
 
@@ -104,8 +97,5 @@
     
     </body>
 </html>
-
-
-
 
 

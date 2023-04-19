@@ -10,6 +10,7 @@ const productsLiving= [
         price: "$12500",
         image: 
             "../assets/d04f9e1cf3dc7d8a4522828dbfe2893c.jpg" ,
+        
 
     },
     {

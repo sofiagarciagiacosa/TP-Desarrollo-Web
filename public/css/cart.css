@@ -1,6 +1,8 @@
 @import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Teko:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@600&display=swap');
 
 *{
     margin: 0;
@@ -16,115 +18,23 @@
 body {
     font-family:'Raleway', sans-serif ;
     width: calc(100vw - (100vw - 100%));
-  }
-
-.section {
-    padding: 16px 40px;
-    margin: 10px;
+    
     
 }
-.section h2{
-    font-size: 27px;
-    padding: 10px;
-    padding-bottom: 10px;
-    padding-left: 110px;
+main{
+    padding-top: 150px;
+    padding-left:20px;
+    padding-right:20px;
 }
-.section h3{
-    font-size: 20px;
-    margin-top: 10px;
-    padding-top: 12px;
-    padding-bottom: 5px;
-    
-
-}
-.section p{
-    margin-top: 5px;
-    padding-top: 5px;
-    padding-bottom: 10px;
-   
-    
-   
-}
-.section img{
-    padding-bottom: 10px;
-    padding-top: 10px;
-    width: 63%;
-    
-}
-
-aside{
-    float: right;
-    width: 30%;
-}
-#productos {
+.tu-carrito{
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: flex-start;
-    min-height: 50vh;
-    position: relative;
-    font-family:'Raleway', sans-serif;
-    margin: 30px;
+}
 
-}
-#pay {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    min-height: 50vh;
-    position: relative;
-    font-family:'Raleway', sans-serif;
-    font-size: 20px;
-    
-}
-.linea {
-  border-top: 1px solid black;
-  height: 2px;
-  max-width: 200px;
-  padding: 0;
-  margin: 20px auto 0 auto;
-}
-a.button{
-    display:inline-block;
-    padding:0.3em 1.2em;
-    margin:0 0.3em 0.3em 0;
-    border-radius:2em;
-    box-sizing: border-box;
-    text-decoration:none;
-    font-weight:300;
-    color:#FFFFFF;
-    background-color:rgb(58, 58, 58);
-    text-align:center;
-    transition: all 0.2s;
+@media (min-width:1200px){
+
+    main{
+        padding-left:30px;
+        padding-right:30px;
+        
     }
-a.button:hover{
-    background-color:rgb(126, 119, 119);
-}
-@media all and (max-width:30em){
-    a.button{
-        display:block;
-        margin:0.2em auto;
-    }
-}
-footer {
-    background-color: white;
-    padding: 10px;
-    top: 0%;
-    z-index: 100;
-}
-footer nav ul {
-    display: flex;
-    list-style: none;
-}
-footer nav ul li {
-    padding: 4px 8px;
-    transition: background-color .5s;
-    cursor: pointer;
-}
-footer nav ul li a {
-    text-decoration: none;
-    font-family:'Raleway', sans-serif;
-    font-weight: bold;
-    color: rgba(12, 10, 10, 0.938);
 }

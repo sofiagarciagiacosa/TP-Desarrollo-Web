@@ -45,6 +45,7 @@ const cocinaRoutes= require("./routes/cocina");
 const dormitorioRoutes= require("./routes/dormitorio");
 const bañoRoutes= require("./routes/baño"); 
 
+
 app.use("/", homeRoutes);
 app.use("/products",productRoutes);
 app.use("/carrito", cartRoutes);

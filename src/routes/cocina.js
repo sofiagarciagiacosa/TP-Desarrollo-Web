@@ -3,7 +3,7 @@ const router= express.Router();
 
 const productsCocina= [
     {
-        id: 1,
+        id: "producto1",
         name: "PROUCTO 1",
         description: "This is the first product",
         price: "$12500",
@@ -12,7 +12,7 @@ const productsCocina= [
 
     },
     {
-        id: 2,
+        id: "producto2",
         name: "PROUCTO 2",
         description: "This is the second product",
         price: "$12500",
@@ -21,7 +21,7 @@ const productsCocina= [
 
     },
     {
-        id: 3,
+        id: "producto3",
         name: "PROUCTO 3",
         description: "This is the third product",
         price: "$12500",
@@ -30,7 +30,7 @@ const productsCocina= [
 
     },
     {
-        id: 4,
+        id: "producto4",
         name: "PROUCTO 4",
         description: "This is the fourth product",
         price: "$12500",
@@ -50,7 +50,7 @@ router.get("/", (req,res) =>{
 router.get("/:id", (req,res) => {
     const {id} = req.params;
     const product= productsCocina.find((product) => product.id == id);
-    return res.status(200).render("vistas/detailProduct.ejs");
+    return res.status(200).render("vistas/detailProductCocina.ejs");
 });
 
 
