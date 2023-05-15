@@ -3,39 +3,93 @@ const router= express.Router();
 
 const productsBaño= [
     {
-        id: 1,
-        name: "PROUCTO 1",
-        description: "This is the first product",
-        price: "$12500",
+        id: "30",
+        name: "TOALLAS CARITAS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$5400",
         image: 
-            "../assets/d04f9e1cf3dc7d8a4522828dbfe2893c.jpg" ,
+            "../assets/bano1.webp" ,
 
     },
     {
-        id: 2,
-        name: "PROUCTO 2",
-        description: "This is the second product",
-        price: "$12500",
+        id: "31",
+        name: "ORGANIZADOR DUCHA",
+        description:"Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$9588",
         image:
-           "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
+           "../assets/bano3.webp",
 
     },
     {
-        id: 3,
-        name: "PROUCTO 3",
-        description: "This is the third product",
-        price: "$12500",
+        id: "32",
+        name: "ALFOMBRA GET NAKED",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$3560",
         image:
-           "../assets/f83259bd913b67879bdc165bb09cc176.jpg",
+           "../assets/bano5.webp",
 
     },
     {
-        id: 4,
-        name: "PROUCTO 4",
-        description: "This is the fourth product",
-        price: "$12500",
+        id: "33",
+        name: "ORGANIZADOR DE MAQUILLAJE",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$6499",
         image:
-           "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
+           "../assets/bano12.webp",
+
+    },
+    {
+        id: "34",
+        name: "ALFOMBRA CUADRITOS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$3560",
+        image:
+           "../assets/bano9.webp",
+
+    },
+    {
+        id: "35",
+        name: "TOALLAS ESTAMPADAS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$5400",
+        image:
+           "../assets/bano2.webp",
+
+    },
+    {
+        id: "36",
+        name: "ORGANIZADOR DUCHA MADERA",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$9588",
+        image:
+           "../assets/bano4.webp",
+
+    },
+    {
+        id: "37",
+        name: "ALFOMBRA FLORCITAS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$3560",
+        image:
+           "../assets/bano6.webp",
+
+    },
+    {
+        id: "38",
+        name: "CORTINA FLORES",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$4640",
+        image:
+           "../assets/bano8.webp",
+
+    },
+    {
+        id: "39",
+        name: "TOALLA CABELLO",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$2272",
+        image:
+           "../assets/bano10.webp",
 
     },
 ]

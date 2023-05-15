@@ -55,6 +55,11 @@ app.use("/cocina", cocinaRoutes);
 app.use("/dormitorio", dormitorioRoutes);
 app.use("/bano", bañoRoutes);
 
+app.use('/filtrar', express.static(path.join(__dirname, '../REACT-FILTER-PROYECT/src/main.jsx')));
+
+app.get('/filtrar/', (req, res) => {
+    res.sendFile(path.join(__dirname, '../REACT-FILTER-PROYECT/index.html'));
+});
 
 //5°
 app.listen( process.env.PORT, () => {console.log("Server listening on Port:", process.env.PORT)});

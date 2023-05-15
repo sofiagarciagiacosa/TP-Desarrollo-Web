@@ -142,8 +142,32 @@ h1{
     
     
 }
-
-
+.li5{
+    width: 14%;
+    display: flex;
+    position: absolute;
+    padding: 0 0.7vw;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    flex-wrap: wrap;
+    align-content: center;
+    justify-content: center;
+    align-items:center;
+    right: 17%;
+    top: 38%;
+    list-style: none;
+    font-weight: 600;
+    z-index: 3;
+}
+.li5 a{
+    margin: 0 0.7vw;
+    text-decoration: none;
+    padding: 10px;
+    color: rgb(82, 81, 81);
+    font-family: 'Heebo', sans-serif;
+    font-size: 16px;
+    
+}
 
 .nav-links li a{
     margin: 0 0.7vw;
@@ -162,12 +186,28 @@ h1{
     padding: 10px;
     border-radius: 50px;
 }
+.li5:hover{
+    color:#000;
+    background-color: #fff;
+    border-radius: 50px;
+}
 
 .nav-links li{
     position:relative;
 }
-.carrito{
-    display: none;
+
+.cart-items{
+    text-decoration: none;
+    transition: all ease-in-out 350ms;
+    color: rgb(82, 81, 81);
+    font-family: 'Heebo', sans-serif;
+    font-size: 16px;
+    left:-20px;
+
+}
+.cart-items-responsive{
+    display:none;
+
 }
 .li3{
     padding-right: 650px;
@@ -176,7 +216,9 @@ h1{
 .nav-links li a:hover::before{
     width: 80%;
 }
-
+.li5:hover::before{
+    width: 80%;
+}
 
 
 
@@ -252,29 +294,32 @@ h1{
         display: flex;
     }
     
-    .li5{
-        display: none;
-    }
+    
     .nav-links li a{
         color: rgb(82, 81, 81);
         font-size:20px;
     }
-    .carrito{
+    .li5{
         display: flex;
+        width: 30%;
+        position: absolute;
         justify-content: flex-end;
-        font-size:23px;
         color: rgb(82, 81, 81);
         align-content: end;
-        width: 100%;
         padding-right: 40px;
         font-family: 'Heebo', sans-serif;
         margin-top: 18px;
         text-decoration: none;
+        right: 1%;
+        top: 12%;
+    }
+    .cart-items{
+        font-size: 22px;
     }
 
-    .carrito  a{
+    .li5  a{
         color: rgb(82, 81, 81);
-        
+        font-size:23px;
     }
     
 

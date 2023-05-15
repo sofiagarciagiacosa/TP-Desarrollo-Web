@@ -1,0 +1,36 @@
+{
+    "productsLiving": [
+        {
+            "id": "producto1",
+            "name": "Producto 1",
+            "description": "This is the first product. lorem ipsum dolor sit amet eget porta semper at eget. ",
+            "price": "$12500",
+            "image": 
+                "../assets/d04f9e1cf3dc7d8a4522828dbfe2893c.jpg" 
+        },
+        {
+            "id": "producto2",
+            "name": "Producto 2",
+            "description": "This is the second product",
+            "price": "$12500",
+            "image":
+                "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg"
+        },
+        {
+            "id": "producto3",
+            "name": "Producto 3",
+            "description": "This is the third product",
+            "price": "$12500",
+            "image":
+                "../assets/f83259bd913b67879bdc165bb09cc176.jpg"
+        },
+        {
+            "id": "producto4",
+            "name": "Producto 4",
+            "description": "This is the fourth product",
+            "price": "$12500",
+            "image":
+                "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg"
+        }
+    ]
+}

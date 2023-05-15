@@ -3,39 +3,93 @@ const router= express.Router();
 
 const productsDormitorio= [
     {
-        id: 1,
-        name: "PROUCTO 1",
-        description: "This is the first product",
-        price: "$12500",
+        id: "20",
+        name: "CUBRECAMA SET BLANCO",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$20000",
         image: 
-            "../assets/d04f9e1cf3dc7d8a4522828dbfe2893c.jpg" ,
+            "../assets/dormi1.webp" ,
 
     },
     {
-        id: 2,
-        name: "PROUCTO 2",
-        description: "This is the second product",
-        price: "$12500",
+        id: "21",
+        name: "SET DE ALMOHADONES",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$8000",
         image:
-           "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
+           "../assets/dormi5.webp",
 
     },
     {
-        id: 3,
-        name: "PROUCTO 3",
-        description: "This is the third product",
-        price: "$12500",
+        id: "21",
+        name: "CUBRECAMA SET ROSA",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$20000",
         image:
-           "../assets/f83259bd913b67879bdc165bb09cc176.jpg",
+           "../assets/dormi3.webp",
 
     },
     {
-        id: 4,
-        name: "PROUCTO 4",
-        description: "This is the fourth product",
-        price: "$12500",
+        id: "23",
+        name: "FRAZADA",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$5672",
         image:
-           "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
+           "../assets/dormi7.webp",
+
+    },
+    {
+        id: "24",
+        name: "FRAZADA LILA",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$5672",
+        image:
+           "../assets/dormi9.webp",
+
+    },
+    {
+        id: "25",
+        name: "SET DE SABANAS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$7877",
+        image:
+           "../assets/dormi2.webp",
+
+    },
+    {
+        id: "26",
+        name: "CUBRECAMA SET VERDE",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$16485",
+        image:
+           "../assets/dormi4.webp",
+
+    },
+    {
+        id: "27",
+        name: "ALMOHADON",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$2500",
+        image:
+           "../assets/dormi6.webp",
+
+    },
+    {
+        id: "28",
+        name: "SET DE FRAZADAS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$16789",
+        image:
+           "../assets/dormi8.webp",
+
+    },
+    {
+        id: "29",
+        name: "ALMOHADON A CUADROS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$2500",
+        image:
+           "../assets/dormi10.webp",
 
     },
 ]

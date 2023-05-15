@@ -104,21 +104,37 @@ h2{
     margin: 1rem auto;
     
 }
+.imagen{
+    display: none;
+}
 @media (min-width:1200px){
     .contenedor-form{
         display: flex;
 
     }
     .form{
-        margin: 30px;
+        margin-top: 30px;
+        margin-right: 30px;
+        margin-bottom: 30px;
+        margin-left: 0px;
         width: 50%;
         right: 0;
         display: flex;
         position: relative;
+        border-top-left-radius: 0%;
+        border-bottom-left-radius: 0%;
 
     }
     .imagen{
         width: 50%;
+        display:grid;
+        margin: 30px;
+        
+
+    }
+    .imagen img{
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
     }
     .registro{
         margin-top: 180px;

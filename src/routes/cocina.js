@@ -3,39 +3,93 @@ const router= express.Router();
 
 const productsCocina= [
     {
-        id: "producto1",
-        name: "PROUCTO 1",
-        description: "This is the first product",
-        price: "$12500",
+        id: "10",
+        name: "SET DE PLATOS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$23996",
         image: 
-            "../assets/d04f9e1cf3dc7d8a4522828dbfe2893c.jpg" ,
+            "../assets/cocina1.webp" ,
 
     },
     {
-        id: "producto2",
-        name: "PROUCTO 2",
-        description: "This is the second product",
-        price: "$12500",
+        id: "11",
+        name: "SET DE TAZAS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$11173",
         image:
-           "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
+           "../assets/cocina2.webp",
 
     },
     {
-        id: "producto3",
-        name: "PROUCTO 3",
-        description: "This is the third product",
-        price: "$12500",
+        id: "12",
+        name: "CONTENEDOR A CUADROS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$2054",
         image:
-           "../assets/f83259bd913b67879bdc165bb09cc176.jpg",
+           "../assets/cocina3.webp",
 
     },
     {
-        id: "producto4",
-        name: "PROUCTO 4",
-        description: "This is the fourth product",
-        price: "$12500",
+        id: "13",
+        name: "ORGANIZADOR DE TAZAS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$5000",
         image:
-           "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
+           "../assets/cocina4.webp",
+
+    },
+    {
+        id: "14",
+        name: "FRUTERA",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$5500",
+        image:
+           "../assets/cocina5.webp",
+
+    },
+    {
+        id: "15",
+        name: "TAZA NUDE",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$2500",
+        image:
+           "../assets/cocina11.webp",
+
+    },
+    {
+        id: "16",
+        name: "SET POSAVASOS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$2336",
+        image:
+           "../assets/cocina7.webp",
+
+    },
+    {
+        id: "17",
+        name: "TAZA NUDE GRANDE",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$3170",
+        image:
+           "../assets/cocina8.webp",
+
+    },
+    {
+        id: "18",
+        name: "SET DE BOWLS",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$11499",
+        image:
+           "../assets/cocina9.webp",
+
+    },
+    {
+        id: "19",
+        name: "CONTENEDOR NUDE",
+        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+        price: "$2054",
+        image:
+           "../assets/cocina10.webp",
 
     },
 ]

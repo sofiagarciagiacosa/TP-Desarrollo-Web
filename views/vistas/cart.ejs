@@ -7,6 +7,7 @@
         <title>AURA online shop</title>   
         <link rel="stylesheet" href="../css/headerNuevo.css"/>
         <link rel="stylesheet" href="../css/footer.css"/>
+        <script src="https://kit.fontawesome.com/3abebdfbc7.js" crossorigin="anonymous"></script>
     </head>
 
     <body>
@@ -15,39 +16,62 @@
             <section class="tu-carrito">
                 <h2>TU CARRITO</h2>
             </section>
-            <section class="section" id="productos">
-                
-                <article class="product">
-                    <img src="../../../assets/f83259bd913b67879bdc165bb09cc176.jpg">
-                    <aside class="right">
-                        <h3 class="product-description" > PRODUCTO</h3>
-                        <p class="product-description" > CANTIDAD </p>
-                        <p class="product-description" > PRECIO $$$</p>
-                    </aside>
-                    
-                </article>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+            <script>
+                $(document).ready(function() {
+                    // Obtenemos los productos del carrito
+                    $.ajax({
+                        url: '/carrito',
+                        method: 'GET',
+                        success: function(data) {
+                            // Actualizamos la tabla con los productos del carrito
+                            var productos = JSON.parse(data);
+                            var total = 0;
+                            for (var i = 0; i < productos.length; i++) {
+                                var producto = productos[i];
+						        total += producto.price * producto.quantity;
+                                $('#carrito').append(
+                                    '<tr>' +
+							        '<td>' + producto.name + '</td>' +
+							        '<td>' + producto.quantity + '</td>' +
+							        '<td>$' + producto.price.toFixed(2) + '</td>' +
+							        '<td>$' + (producto.price * producto.quantity).toFixed(2) + '</td>' +
+							        '<td><button class="eliminar" data-id="' + producto.id + '">Eliminar</button></td>' +
+							        '</tr>'
+                                );
+                            }
+					        $('#total').text('$' + total.toFixed(2));
+				        }
+                    });
+                });
+            </script>
+            <h1>Carrito de compras</h1>
+            <table id="carrito">
+                <thead>
+                    <tr>
+                        <th>Producto</th>
+                        <th>Cantidad</th>
+                        <th>Precio unitario</th>
+                        <th>Total</th>
+                        <th></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Aquí se insertarán los productos del carrito con JavaScript -->
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="3">Total:</td>
+                        <td id="total">$0.00</td>
+                        <td></td>
+                    </tr>
+                </tfoot>
+            </table>
+            <button>Comprar</button>
 
-                <article class="product">
-                    <img src="../../../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg">
-                    
-                    <aside>
-                        <h3 class="product-description" > PRODUCTO</h3>
-                        <p class="product-description" > CANTIDAD </p>
-                        <p class="product-description" > PRECIO $$$</p>
-                    </aside>
-                    
-                </article>
 
-                <article class="product">
-                    <img src="../../../assets/d04f9e1cf3dc7d8a4522828dbfe2893c.jpg">
-                    <aside>
-                        <h3 class="product-description" > PRODUCTO</h3>
-                        <p class="product-description" > CANTIDAD </p>
-                        <p class="product-description" > PRECIO $$$</p>
-                    
-                    </aside>
-                </article>
-            </section>
+
+
 
             <section class="section" id="pay">
                 <div class="linea"></div>

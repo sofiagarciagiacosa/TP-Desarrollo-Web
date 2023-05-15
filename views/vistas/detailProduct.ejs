@@ -5,6 +5,10 @@
         <link rel="stylesheet" href="../css/footer.css" />
         <link rel="stylesheet" href="../css/headerNuevo.css" />
         <link rel="stylesheet" href="../css/detailProduct.css" />
+        <script src="https://kit.fontawesome.com/3abebdfbc7.js" crossorigin="anonymous"></script>
+        
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        
     </head>
     <body>
         <%- include("../partials/header.ejs") %>
@@ -23,11 +27,13 @@
                     
                 </div>
             </div>
-            
+            <button id="agregar-carrito" data-producto="producto1">Agregar al carrito</button>
             
             
 
         </main>
+        
+
 
 
         <script>
@@ -35,40 +41,91 @@
             const id = path.substring(path.lastIndexOf('/') + 1);
             console.log(id);
             
-            const productsLiving= [
-                {
-                    id: "producto1",
-                    name: "Producto 1",
-                    description: "This is the first product. lorem ipsum dolor sit amet eget porta semper at eget. ",
-                    price: "$12500",
-                    image: 
-                        "../assets/d04f9e1cf3dc7d8a4522828dbfe2893c.jpg" ,
-                },
-                {
-                    id: "producto2",
-                    name: "Producto 2",
-                    description: "This is the second product",
-                    price: "$12500",
-                    image:
-                        "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
-                },
-                {
-                    id: "producto3",
-                    name: "Producto 3",
-                    description: "This is the third product",
-                    price: "$12500",
-                    image:
-                        "../assets/f83259bd913b67879bdc165bb09cc176.jpg",
-                },
-                {
-                    id: "producto4",
-                    name: "Producto 4",
-                    description: "This is the fourth product",
-                    price: "$12500",
-                    image:
-                        "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
-                },
-            ]
+            const productsLiving = [
+                    {
+                        id: "5",
+                        name: "MESA REDONDA BLANCA",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                        price: "$28000",
+                        image:
+                            "../assets/82878398_004_dliving1.webp",
+
+                    },
+                    {
+
+                        id: "1",
+                        name: "RACK ROSA",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                        price: "$11950",
+                        image:
+                            "../assets/d04f9e1cf3dc7d8a4522828dbfe2893c.jpg",
+
+
+                    },
+                    {
+                        id: "2",
+                        name: "LAMPARA A CUADROS",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                        price: "$3120",
+                        image:
+                            "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
+
+                    },
+                    {
+                        id: "3",
+                        name: "PUFF BLANCO",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                        price: "$18392",
+                        image:
+                            "../assets/f83259bd913b67879bdc165bb09cc176.jpg",
+
+                    },
+                    {
+                        id: "4",
+                        name: "MESA REDONDA NEGRA",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                        price: "$28000",
+                        image:
+                            "../assets/82177999_001_dliving2.webp",
+
+                    },
+                    {
+                        id: "6",
+                        name: "MESA RECTANGULAR NEGRA",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                        price: "$37899",
+                        image:
+                            "../assets/81602765_001_dliving3.webp",
+                    },
+                    {
+                        id: "7",
+                        name: "SOFA BLANCO",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                        price: "$80259",
+                        image:
+                            "../assets/83006395_010_dliving4.webp",
+                    },
+
+                    {
+                        id: "8",
+                        name: "SOFA GRIS",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                        price: "$142490",
+                        image:
+                            "../assets/82097635_003_dliving5.webp",
+                    },
+                    {
+                        id: "9",
+                        name: "ESPEJO BLANCO",
+                        description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                        price: "$5020",
+                        image:
+                            "../assets/78069929_010_dliving6.webp",
+                    },
+
+
+
+                ]
             
             
 
@@ -81,15 +138,6 @@
             document.getElementById("description").textContent = producto.description;
             document.getElementById("price").textContent = `Precio: ${producto.price}`;
             document.getElementById("comprar").href = `comprar.html?id=${producto.id}`;
-            
-
-
-            
-            
-            
-            
-
-
 
 
             
