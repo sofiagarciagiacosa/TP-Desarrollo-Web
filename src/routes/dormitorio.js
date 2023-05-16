@@ -104,7 +104,7 @@ router.get("/", (req,res) =>{
 router.get("/:id", (req,res) => {
     const {id} = req.params;
     const product= productsDormitorio.find((product) => product.id == id);
-    return res.status(200).render("vistas/detailProduct.ejs");
+    return res.status(200).render("vistas/detailProductDormitorio.ejs");
 });
 
 

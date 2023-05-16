@@ -1,53 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Registro -AURA</title>
-        <link rel="stylesheet" href="../css/headerNuevo.css"/>
-        <link rel="stylesheet" href="../css/footer.css"/>
-        <link rel="stylesheet" href="../css/signup.css"/>
-        <script src="https://kit.fontawesome.com/3abebdfbc7.js" crossorigin="anonymous"></script>
 
-    </head>
-    <body>
-        <%- include("../partials/header.ejs") %>
+<head>
+    <title>AURA online shop</title>
+    <link rel="stylesheet" href="../css/footer.css" />
+    <link rel="stylesheet" href="../css/headerNuevo.css" />
+    <link rel="stylesheet" href="../css/detailProduct.css" />
+    <script src="https://kit.fontawesome.com/3abebdfbc7.js" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+
+<body>
+    <%- include("../partials/header.ejs") %>
         <main>
-            <div class="contenedor-form">
-                <div class="imagen">
-                    <img src="../assets/bannerlogin2.jpg" alt="Banner">
+            <div class="caja-grande">
+                <div class="caja-imagen">
+                    <img id="image">
+                </div>
+                <div class="caja-info">
+                    <h1 id="name"></h1>
+                    <p id="description"></p>
+                    <h2 id="price"></h2>
 
                 </div>
-                <form class="form" action="http://localhost:8000/signin" method="post">
-    
-                    <div class="registro">
-                        <h2> Inicio de sesión </h2>
-                        
-                    </div>
-                    <div class="formulario-input">
-                        <input 
-                          required type="text"
-                          name="email"
-                          placeholder=" Email"
-                        />
-    
-                    </div>
-                    <div class="formulario-input" >
-                        <input 
-                          required type="password"
-                          name="password"
-                          placeholder=" Contraseña"
-                        />
-    
-                    </div>
-                    <div class="formulario-boton">
-                        <button class="form-element" type="submit">SIGN IN</button>
-                    </div>
-                    <div class="inicio-sesion">
-                        <p>¿No tenes una cuenta?<a href="http://localhost:8000/signup">Registrate!</a></p>
-                        <a href=""> ¿Olvidaste tu contraseña?</a>
-                    </div>
-                </form>
-
             </div>
+
+
             <div class="cart-overlay">
                 <div class="cart">
                     <span class="close-cart">
@@ -55,7 +35,7 @@
                     </span>
                     <h2>TU CARRITO</h2>
                     <div class="cart-content">
-            
+
                     </div>
                     <div class="cart-footer">
                         <h3>total: $<span class="cart-total">0</span></h3>
@@ -63,32 +43,19 @@
                     </div>
                 </div>
             </div>
+
+
         </main>
-    
-    
-        <%- include("../partials/footer.ejs") %>
+
+
+
+
         <script>
+            const path = window.location.pathname;
+            const id = path.substring(path.lastIndexOf('/') + 1);
+            console.log(id);
 
-
-            let element = document.querySelector('.class-name');
-
-            const cartBtn = document.querySelector(".cart-btn");
-            const closeCartBtn = document.querySelector(".close-cart");
-            const clearCartBtn = document.querySelector(".clear-cart");
-
-            const cartDOM = document.querySelector(".cart");
-
-            const cartOverlay = document.querySelector(".cart-overlay");
-
-            const cartItems = document.querySelector(".cart-items");
-
-            const cartTotal = document.querySelector(".cart-total");
-
-            const cartContent = document.querySelector(".cart-content");
-
-            const productsDOM = document.querySelector(".products-center");
-
-            const productsLiving = [
+            const productsBaño = [
                 {
                     id: "5",
                     name: "MESA REDONDA BLANCA",
@@ -427,11 +394,41 @@
 
                 },
 
+
+
+
             ]
 
+            const producto = productsBaño.find(p => p.id === id);
+            console.log(productsBaño);
+            console.log(producto);
+
+            document.getElementById("name").textContent = producto.name;
+            document.getElementById("image").src = producto.image;
+            document.getElementById("description").textContent = producto.description;
+            document.getElementById("price").textContent = `Precio: $${producto.price}`;
 
 
-            // Manipulating the DOM here
+
+            let element = document.querySelector('.class-name');
+
+            const cartBtn = document.querySelector(".cart-btn");
+            const closeCartBtn = document.querySelector(".close-cart");
+            const clearCartBtn = document.querySelector(".clear-cart");
+
+            const cartDOM = document.querySelector(".cart");
+
+            const cartOverlay = document.querySelector(".cart-overlay");
+
+            const cartItems = document.querySelector(".cart-items");
+
+            const cartTotal = document.querySelector(".cart-total");
+
+            const cartContent = document.querySelector(".cart-content");
+
+            const productsDOM = document.querySelector(".products-center");
+
+
 
 
             let cart = [];
@@ -441,7 +438,7 @@
             class Products {
                 async getProducts() {
                     try {
-                        const products = productsLiving;
+                        const products = productsBaño;
                         return products;
                     } catch (error) {
                         console.log(error);
@@ -456,7 +453,7 @@
                     let result = "";
                     products.forEach(product => {
                         result += `
-                                `
+                        `
 
                     });
 
@@ -507,16 +504,16 @@
                     const div = document.createElement("div");
                     div.classList.add('cart-item');
                     div.innerHTML = `<img src="${item.image}"/>
-                                    <div>
-                                        <h4>${item.name}</h4>
-                                        <h5>$${item.price}</h5>
-                                        <span class="remove-item" data-id=${item.id}>remover</span>
-                                    </div>
-                                    <div>
-                                        <i class="fas fa-chevron-up" data-id=${item.id}></i>
-                                        <p class="item-amount">${item.amount}</p>
-                                        <i class="fas fa-chevron-down" data-id=${item.id}></i>
-                                    </div>`;
+                            <div>
+                                <h4>${item.name}</h4>
+                                <h5>$${item.price}</h5>
+                                <span class="remove-item" data-id=${item.id}>remover</span>
+                            </div>
+                            <div>
+                                <i class="fas fa-chevron-up" data-id=${item.id}></i>
+                                <p class="item-amount">${item.amount}</p>
+                                <i class="fas fa-chevron-down" data-id=${item.id}></i>
+                            </div>`;
                     cartContent.appendChild(div);
 
 
@@ -649,8 +646,14 @@
                         ui.cartLogic();
                     });
             });
-
         </script>
-    </body>
+
+
+
+        <%- include("../partials/footer.ejs") %>
+
+
+
+</body>
 
 </html>
