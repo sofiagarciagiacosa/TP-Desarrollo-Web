@@ -37,8 +37,6 @@ app.use(
 
 //4° Rutas
 const homeRoutes = require("./routes/home");
-const cartRoutes= require("./routes/cart");
-const productRoutes= require("./routes/products");
 const authRoutes= require("./routes/auth");
 const livingRoutes= require("./routes/living");
 const cocinaRoutes= require("./routes/cocina");
@@ -47,8 +45,6 @@ const bañoRoutes= require("./routes/baño");
 
 
 app.use("/", homeRoutes);
-app.use("/products",productRoutes);
-app.use("/carrito", cartRoutes);
 app.use("/",authRoutes);
 app.use("/living", livingRoutes);
 app.use("/cocina", cocinaRoutes);
