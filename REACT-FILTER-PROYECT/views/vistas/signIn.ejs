@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Registro -AURA</title>
+        <link rel="stylesheet" href="../css/headerNuevo.css"/>
+        <link rel="stylesheet" href="../css/footer.css"/>
+        <link rel="stylesheet" href="../css/signup.css"/>
+        <script src="https://kit.fontawesome.com/3abebdfbc7.js" crossorigin="anonymous"></script>
+
+    </head>
+    <body>
+        <%- include("../partials/header.ejs") %>
+        <main>
+            <div class="contenedor-form">
+                <div class="imagen">
+                    <img src="../assets/bannerlogin2.jpg" alt="Banner">
+
+                </div>
+                <form class="form" action="http://localhost:8000/signin" method="post">
+    
+                    <div class="registro">
+                        <h2> Inicio de sesión </h2>
+                        
+                    </div>
+                    <div class="formulario-input">
+                        <input 
+                          required type="text"
+                          name="email"
+                          placeholder=" Email"
+                        />
+    
+                    </div>
+                    <div class="formulario-input" >
+                        <input 
+                          required type="password"
+                          name="password"
+                          placeholder=" Contraseña"
+                        />
+    
+                    </div>
+                    <div class="formulario-boton">
+                        <button class="form-element" type="submit">SIGN IN</button>
+                    </div>
+                    <div class="inicio-sesion">
+                        <p>¿No tenes una cuenta?<a href="http://localhost:8000/signup">Registrate!</a></p>
+                        <a href=""> ¿Olvidaste tu contraseña?</a>
+                    </div>
+                </form>
+
+            </div>
+            <div class="cart-overlay">
+                <div class="cart">
+                    <span class="close-cart">
+                        <i class="fas fa-window-close"></i>
+                    </span>
+                    <h2>TU CARRITO</h2>
+                    <div class="cart-content">
+            
+                    </div>
+                    <div class="cart-footer">
+                        <h3>total: $<span class="cart-total">0</span></h3>
+                        <button class="clear-cart banner-btn">VACIAR CARRITO</button>
+                    </div>
+                </div>
+            </div>
+        </main>
+    
+    
+        <%- include("../partials/footer.ejs") %>
+        <script>
+
+
+            let element = document.querySelector('.class-name');
+
+            const cartBtn = document.querySelector(".cart-btn");
+            const closeCartBtn = document.querySelector(".close-cart");
+            const clearCartBtn = document.querySelector(".clear-cart");
+
+            const cartDOM = document.querySelector(".cart");
+
+            const cartOverlay = document.querySelector(".cart-overlay");
+
+            const cartItems = document.querySelector(".cart-items");
+
+            const cartTotal = document.querySelector(".cart-total");
+
+            const cartContent = document.querySelector(".cart-content");
+
+            const productsDOM = document.querySelector(".products-center");
+
+            const productsLiving = [
+                {
+                    id: "5",
+                    name: "MESA REDONDA BLANCA",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "28000",
+                    image: "../assets/82878398_004_dliving1.webp",
+
+                },
+                {
+                    id: "1",
+                    name: "RACK ROSA",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "11950",
+                    image: "../assets/d04f9e1cf3dc7d8a4522828dbfe2893c.jpg",
+                },
+                {
+                    id: "2",
+                    name: "LAMPARA A CUADROS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "3120",
+                    image: "../assets/ddbf02c3860b9e77fb7ad17ea476f6a1.jpg",
+                },
+                {
+                    id: "3",
+                    name: "PUFF BLANCO",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "18392",
+                    image: "../assets/f83259bd913b67879bdc165bb09cc176.jpg",
+
+                },
+                {
+                    id: "4",
+                    name: "MESA REDONDA NEGRA",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "28000",
+                    image: "../assets/82177999_001_dliving2.webp",
+
+                },
+                {
+                    id: "6",
+                    name: "MESA RECTANGULAR NEGRA",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "37899",
+                    image: "../assets/81602765_001_dliving3.webp",
+                },
+                {
+                    id: "7",
+                    name: "SOFA BLANCO",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "80259",
+                    image: "../assets/83006395_010_dliving4.webp",
+                },
+
+                {
+                    id: "8",
+                    name: "SOFA GRIS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "142490",
+                    image: "../assets/82097635_003_dliving5.webp",
+                },
+                {
+                    id: "9",
+                    name: "ESPEJO BLANCO",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "5020",
+                    image: "../assets/78069929_010_dliving6.webp",
+                },
+                {
+                    id: "10",
+                    name: "SET DE PLATOS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "23996",
+                    image:
+                        "../assets/cocina1.webp",
+
+                },
+                {
+                    id: "11",
+                    name: "SET DE TAZAS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "11173",
+                    image:
+                        "../assets/cocina2.webp",
+
+                },
+                {
+                    id: "12",
+                    name: "CONTENEDOR A CUADROS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "2054",
+                    image:
+                        "../assets/cocina3.webp",
+
+                },
+                {
+                    id: "13",
+                    name: "ORGANIZADOR DE TAZAS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "5000",
+                    image:
+                        "../assets/cocina4.webp",
+
+                },
+                {
+                    id: "14",
+                    name: "FRUTERA",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "5500",
+                    image:
+                        "../assets/cocina5.webp",
+
+                },
+                {
+                    id: "15",
+                    name: "TAZA NUDE",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "2500",
+                    image:
+                        "../assets/cocina11.webp",
+
+                },
+                {
+                    id: "16",
+                    name: "SET POSAVASOS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "2336",
+                    image:
+                        "../assets/cocina7.webp",
+
+                },
+                {
+                    id: "17",
+                    name: "TAZA NUDE GRANDE",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "3170",
+                    image:
+                        "../assets/cocina8.webp",
+
+                },
+                {
+                    id: "18",
+                    name: "SET DE BOWLS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "11499",
+                    image:
+                        "../assets/cocina9.webp",
+
+                },
+                {
+                    id: "19",
+                    name: "CONTENEDOR NUDE",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "2054",
+                    image:
+                        "../assets/cocina10.webp",
+
+                },
+                {
+                    id: "20",
+                    name: "CUBRECAMA SET BLANCO",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "20000",
+                    image:
+                        "../assets/dormi1.webp",
+
+                },
+                {
+                    id: "21",
+                    name: "SET DE ALMOHADONES",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "8000",
+                    image:
+                        "../assets/dormi5.webp",
+
+                },
+                {
+                    id: "21",
+                    name: "CUBRECAMA SET ROSA",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "20000",
+                    image:
+                        "../assets/dormi3.webp",
+
+                },
+                {
+                    id: "23",
+                    name: "FRAZADA",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "5672",
+                    image:
+                        "../assets/dormi7.webp",
+
+                },
+                {
+                    id: "24",
+                    name: "FRAZADA LILA",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "5672",
+                    image:
+                        "../assets/dormi9.webp",
+
+                },
+                {
+                    id: "25",
+                    name: "SET DE SABANAS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "7877",
+                    image:
+                        "../assets/dormi2.webp",
+
+                },
+                {
+                    id: "26",
+                    name: "CUBRECAMA SET VERDE",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "16485",
+                    image:
+                        "../assets/dormi4.webp",
+
+                },
+                {
+                    id: "27",
+                    name: "ALMOHADON",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "2500",
+                    image:
+                        "../assets/dormi6.webp",
+
+                },
+                {
+                    id: "28",
+                    name: "SET DE FRAZADAS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "16789",
+                    image:
+                        "../assets/dormi8.webp",
+
+                },
+                {
+                    id: "29",
+                    name: "ALMOHADON A CUADROS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "2500",
+                    image:
+                        "../assets/dormi10.webp",
+
+                },
+                {
+                    id: "30",
+                    name: "TOALLAS CARITAS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "5400",
+                    image:
+                        "../assets/bano1.webp",
+
+                },
+                {
+                    id: "31",
+                    name: "ORGANIZADOR DUCHA",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "9588",
+                    image:
+                        "../assets/bano3.webp",
+
+                },
+                {
+                    id: "32",
+                    name: "ALFOMBRA GET NAKED",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "3560",
+                    image:
+                        "../assets/bano5.webp",
+
+                },
+                {
+                    id: "33",
+                    name: "ORGANIZADOR DE MAQUILLAJE",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "6499",
+                    image:
+                        "../assets/bano12.webp",
+
+                },
+                {
+                    id: "34",
+                    name: "ALFOMBRA CUADRITOS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "3560",
+                    image:
+                        "../assets/bano9.webp",
+
+                },
+                {
+                    id: "35",
+                    name: "TOALLAS ESTAMPADAS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "5400",
+                    image:
+                        "../assets/bano2.webp",
+
+                },
+                {
+                    id: "36",
+                    name: "ORGANIZADOR DUCHA MADERA",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "9588",
+                    image:
+                        "../assets/bano4.webp",
+
+                },
+                {
+                    id: "37",
+                    name: "ALFOMBRA FLORCITAS",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "3560",
+                    image:
+                        "../assets/bano6.webp",
+
+                },
+                {
+                    id: "38",
+                    name: "CORTINA FLORES",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "4640",
+                    image:
+                        "../assets/bano8.webp",
+
+                },
+                {
+                    id: "39",
+                    name: "TOALLA CABELLO",
+                    description: "Lorem ipsum dolor sit amet, consectetur adipisci elit.",
+                    price: "2272",
+                    image:
+                        "../assets/bano10.webp",
+
+                },
+
+            ]
+
+
+
+            // Manipulating the DOM here
+
+
+            let cart = [];
+            //buttons
+            let buttonsDOM = [];
+
+            class Products {
+                async getProducts() {
+                    try {
+                        const products = productsLiving;
+                        return products;
+                    } catch (error) {
+                        console.log(error);
+                    }
+                }
+
+            }
+
+            class UI {
+                displayProducts(products) {
+                    console.log(products);
+                    let result = "";
+                    products.forEach(product => {
+                        result += `
+                                `
+
+                    });
+
+                }
+                getBagButtons() {
+                    const buttons = [...document.querySelectorAll(".bag-btn")];
+                    buttonsDOM = buttons;
+                    buttons.forEach(button => {
+                        let id = button.dataset.id;
+                        let inCart = cart.find(item => item.id === id);
+                        if (inCart) {
+                            button.innerText = "AGREGADO";
+                            button.disabled = true;
+                        }
+
+                        button.addEventListener('click', (event) => {
+                            event.target.innerText = 'AGREGADO';
+                            event.target.disabled = true;
+                            // get products from products
+                            let cartItem = { ...Storage.getProduct(id), amount: 1 };
+
+                            //, agregarlos al carrito
+                            cart = [...cart, cartItem];
+                            //, guardar carrito en local storage
+                            Storage.saveCart(cart);
+                            //, set valores del carrito
+                            this.setCartValues(cart);
+                            // display cart item
+                            this.addCartItem(cartItem);
+                            // show ccart
+                            this.showCart();
+                        });
+
+                    })
+                }
+                setCartValues(cart) {
+                    let tempTotal = 0;
+                    let itemsTotal = 0;
+                    cart.map(item => {
+                        tempTotal += item.price * item.amount;
+                        itemsTotal += item.amount;
+
+                    })
+                    cartTotal.innerText = parseFloat(tempTotal.toFixed(2));
+                    cartItems.innerText = itemsTotal;
+                }
+                addCartItem(item) {
+                    const div = document.createElement("div");
+                    div.classList.add('cart-item');
+                    div.innerHTML = `<img src="${item.image}"/>
+                                    <div>
+                                        <h4>${item.name}</h4>
+                                        <h5>$${item.price}</h5>
+                                        <span class="remove-item" data-id=${item.id}>remover</span>
+                                    </div>
+                                    <div>
+                                        <i class="fas fa-chevron-up" data-id=${item.id}></i>
+                                        <p class="item-amount">${item.amount}</p>
+                                        <i class="fas fa-chevron-down" data-id=${item.id}></i>
+                                    </div>`;
+                    cartContent.appendChild(div);
+
+
+                }
+                showCart() {
+                    cartOverlay.classList.add('transparentBcg');
+                    cartDOM.classList.add('showCart');
+
+
+                }
+                setupAPP() {
+                    cart = Storage.getCart();
+                    this.setCartValues(cart);
+                    this.populateCart(cart);
+
+                    cartBtn.addEventListener("click", this.showCart);
+                    closeCartBtn.addEventListener("click", this.hideCart);
+
+                }
+                populateCart(cart) {
+                    cart.forEach(item => this.addCartItem(item));
+
+                }
+                hideCart() {
+                    cartOverlay.classList.remove('transparentBcg');
+                    cartDOM.classList.remove('showCart');
+
+                }
+                cartLogic() {
+                    // clear cart button
+                    clearCartBtn.addEventListener('click', () => {
+                        this.clearCart();
+                    });
+                    // funcionalidad
+                    cartContent.addEventListener('click', event => {
+                        if (event.target.classList.contains('remove-item')) {
+                            let removeItem = event.target;
+                            let id = removeItem.dataset.id;
+                            cartContent.removeChild(removeItem.parentElement.parentElement);
+                            this.removeItem(id);
+                        }
+                        else if (event.target.classList.contains('fa-chevron-up')) {
+                            let addAmount = event.target;
+                            let id = addAmount.dataset.id;
+                            let tempItem = cart.find(item => item.id === id);
+                            tempItem.amount = tempItem.amount + 1;
+                            Storage.saveCart(cart);
+                            this.setCartValues(cart);
+                            addAmount.nextElementSibling.innerText = tempItem.amount;
+                        }
+                        else if (event.target.classList.contains('fa-chevron-down')) {
+                            let lowerAmount = event.target;
+                            let id = lowerAmount.dataset.id;
+                            let tempItem = cart.find(item => item.id === id);
+                            tempItem.amount = tempItem.amount - 1;
+                            if (tempItem.amount > 0) {
+                                Storage.saveCart(cart);
+                                this.setCartValues(cart);
+                                lowerAmount.previousElementSibling.innerText = tempItem.amount;
+
+                            }
+                            else {
+                                cartContent.removeChild(lowerAmount.parentElement.parentElement);
+                                this.removeItem(id);
+                            }
+
+                        }
+
+
+                    });
+
+
+                }
+                clearCart() {
+
+                    let cartItems = cart.map(item => item.id);
+                    cartItems.forEach(id => this.removeItem(id));
+                    console.log(cartContent.children);
+
+                    while (cartContent.children.length > 0) {
+                        cartContent.removeChild(cartContent.children[0]);
+                    }
+                    this.hideCart();
+
+                }
+
+                removeItem(id) {
+                    cart = cart.filter(item => item.id !== id);
+                    this.setCartValues(cart);
+                    Storage.saveCart(cart);
+                    let button = this.getSingleButton(id);
+                    button.disabled = false;
+                    button.innerHTML = `<i class="fas fa-shopping-cart"></i> AGREGAR AL CARRITO`;
+                }
+                getSingleButton(id) {
+                    return buttonsDOM.find(button => button.dataset.id === id);
+                }
+
+
+            }
+            class Storage {
+                static saveProducts(products) {
+                    localStorage.setItem("products", JSON.stringify(products));
+                }
+                static getProduct(id) {
+                    let products = JSON.parse(localStorage.getItem("products"));
+                    return products.find(product => product.id === id);
+                }
+                static saveCart(cart) {
+                    localStorage.setItem('cart', JSON.stringify(cart));
+                }
+                static getCart() {
+                    return localStorage.getItem('cart') ? JSON.parse(localStorage.getItem('cart')) : [];
+                }
+            }
+            document.addEventListener("DOMContentLoaded", () => {
+
+                const ui = new UI();
+
+                const products = new Products();
+                // setup app
+                ui.setupAPP();
+
+                products.getProducts().then(products => {
+                    ui.displayProducts(products);
+                    Storage.saveProducts(products);
+                })
+                    .then(() => {
+                        ui.getBagButtons();
+                        ui.cartLogic();
+                    });
+            });
+
+        </script>
+    </body>
+
+</html>

@@ -1,0 +1,73 @@
+<header>
+    
+
+    <nav class="espacio">
+        <div class="espacio"> </div>
+    </nav>
+    
+    <nav class="navbar">
+        
+        <div class="hamburger">
+            <div class="bars1"> </div>
+            <div class="bars2"> </div>
+            <div class="bars3"> </div>
+        </div>
+
+        <ul class="nav-links">
+            <li class="li1"><a href="#">PRODUCTOS</a>
+                <ul class="dropdown">
+                    <li class="subproducto"><a href="http://localhost:8000/living">LIVING</a></li>
+                    <li class="subproducto"><a href="http://localhost:8000/cocina">COCINA</a></li>
+                    <li class="subproducto"><a href="http://localhost:8000/dormitorio">DORMITORIO</a></li>
+                    <li class="subproducto"><a href="http://localhost:8000/bano">BAÑO</a></li>   
+                </ul>
+                
+            </li>
+            
+            <li class="li2"><a href="http://localhost:3000/filtrar">FILTRA</a></li>
+            <li class="li3"><a href="#">LOCALES</a></li>
+
+            <li class="li4"><a href="http://localhost:8000/signIn">MI CUENTA</a></li>
+            
+            
+        </ul>
+    
+        <div class="li5">
+            
+            <div class="cart-btn">
+                
+                <span class="nav-icon">
+                    <a >CARRITO</a>
+                    
+                </span>
+                
+            </div>
+            <li class="cart-items">(0)</li>
+        </div>
+        
+        <li class="cart-items-responsive">0</li>
+        <div class="logo">
+            <h1><a href="http://localhost:8000">aura</a></h1>
+        </div>
+        
+    </nav>
+    
+    <script >
+        const hamburger = document.querySelector(".hamburger");
+        const navLinks = document.querySelector(".nav-links");
+        const links = document.querySelectorAll(".nav-links li"  );
+        
+        hamburger.addEventListener('click', ()=>{
+            //Links
+            navLinks.classList.toggle("open");
+            links.forEach(link => {
+                link.classList.toggle("fade");
+            });
+            //Animation
+            hamburger.classList.toggle("toggle");
+        });
+        
+
+    </script>
+
+</header>

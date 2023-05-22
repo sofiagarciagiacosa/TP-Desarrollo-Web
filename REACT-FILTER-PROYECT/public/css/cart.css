@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Inter&family=Raleway&family=Staatliches&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@700&family=Teko:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-clip: border-box;
+}
+:root{
+    --primary: black;
+    --secundary: white;
+}
+
+body {
+    font-family:'Raleway', sans-serif ;
+    width: calc(100vw - (100vw - 100%));
+    
+    
+}
+main{
+    padding-top: 150px;
+    padding-left:20px;
+    padding-right:20px;
+}
+.tu-carrito{
+    display: flex;
+}
+
+@media (min-width:1200px){
+
+    main{
+        padding-left:30px;
+        padding-right:30px;
+        
+    }
+}
